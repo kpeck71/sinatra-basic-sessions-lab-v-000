@@ -1,6 +1,7 @@
 <h2>What would you like to purchase?</h2>
 <form action="/checkout" method="POST">
   <p>Item to Purchase: <input type="text" name="item"></p>
+  <input type = "submit" name = "submit">
 </form>
 
 <h2>Item Purchased: <%=@sessions["item"] %></h2>
