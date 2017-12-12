@@ -5,6 +5,7 @@ class App < Sinatra::Base
   configure do
     enable :sessions
     set :session_secret, "secret"
+    @sessions = session
   end
 
   get '/' do
@@ -12,7 +13,6 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-    @sessions = session
     @sessions = params[:item]
 
     erb :checkout
